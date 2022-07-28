@@ -51,7 +51,7 @@ export const StyledMenu = styled(NavigationMenu.Root, {
     position: "relative",
     display: "flex",
     justifyContent: "center",
-    width: 1920,
+    width: '100%',
     height: 80,
     zIndex: 1,
   });
@@ -60,7 +60,7 @@ export const StyledMenu = styled(NavigationMenu.Root, {
     all: "unset",
     display: "flex",
     justifyContent: "center",
-    backgroundColor: `${violet.violet7}`,
+    backgroundColor: `${violet.violet12}`,
     padding: 4,
     borderRadius: 6,
     listStyle: "none",
@@ -75,9 +75,9 @@ export const StyledMenu = styled(NavigationMenu.Root, {
     lineHeight: 1,
     borderRadius: 4,
     fontSize: 15,
-    color: violet.violet11,
+    color: 'white',
     "&:focus": { position: "relative", boxShadow: `0 0 0 2px ${violet.violet7}` },
-    "&:hover": { backgroundColor: violet.violet3 },
+    "&:hover": { backgroundColor: violet.violet13 },
   };
   
   export const StyledTrigger = styled(NavigationMenu.Trigger, {
