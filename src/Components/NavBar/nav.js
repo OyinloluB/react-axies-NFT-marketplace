@@ -4,6 +4,7 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import * as styles from './navStyles';
 import { violet, mauve, blackA } from "@radix-ui/colors";
 import Wallet from "../../assets/icons/WalletIcon.svg";
+import Axies from "../../assets/icons/AxiesIcon.svg";
 //import { violet, mauve, indigo, purple, blackA } from "@radix-ui/colors";
 
 
@@ -154,6 +155,10 @@ export const NavigationMenuDemo = () => {
   return (
     <NavigationMenuZero>
       <NavigationMenuList>
+
+      <NavigationMenuItem>
+      <styles.StyledImg src={Axies}/>
+        </NavigationMenuItem>
         
         <NavigationMenuItem>
           <NavigationMenuLink href="/">Home</NavigationMenuLink>
