@@ -3,9 +3,9 @@ import { CaretDownIcon, MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { violet, mauve, indigo, purple, blackA } from "@radix-ui/colors";
 import React from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import Wallet from "../../assets/icons/WalletIcon.svg";
+import Wallet from "../../assets/icons/walletIcon.svg";
 
-
+//Keyframes
 export const enterFromRight = keyframes({
     from: { transform: "translateX(200px)", opacity: 0 },
     to: { transform: "translateX(0)", opacity: 1 },
@@ -45,6 +45,9 @@ export const enterFromRight = keyframes({
     from: { opacity: 1 },
     to: { opacity: 0 },
   });
+
+
+  //Conponents
 
 
 export const StyledMenu = styled(NavigationMenu.Root, {
@@ -253,3 +256,58 @@ export const StyledMenu = styled(NavigationMenu.Root, {
       '&[data-state="closed"]': { animation: `${scaleOut} 200ms ease` },
     },
   });
+
+
+  // Your app...
+export const ContentList = styled("ul", {
+  display: "grid",
+  padding: 22,
+  margin: 0,
+  columnGap: 10,
+  listStyle: "none",
+
+  variants: {
+    layout: {
+      one: {
+        "@media only screen and (min-width: 600px)": {
+          width: 500,
+          gridTemplateColumns: ".75fr 1fr",
+        },
+      },
+      two: {
+        "@media only screen and (min-width: 600px)": {
+          width: 600,
+          gridAutoFlow: "column",
+          gridTemplateRows: "repeat(3, 1fr)",
+        },
+      },
+    },
+  },
+});
+
+export const ListItem = styled("li", {});
+
+export const LinkTitle = styled("div", {
+  fontWeight: 500,
+  lineHeight: 1.2,
+  marginBottom: 5,
+  color: violet.violet12,
+});
+
+export const LinkText = styled("p", {
+  all: "unset",
+  color: mauve.mauve11,
+  lineHeight: 1.4,
+  fontWeight: "initial",
+});
+
+
+export const ViewportPosition = styled("div", {
+  position: "absolute",
+  display: "flex",
+  justifyContent: "center",
+  width: "100%",
+  top: "100%",
+  left: 0,
+  perspective: "2000px",
+});
