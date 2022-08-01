@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './App.css';
-import NavigationMenuDemo from './Components/NavBar/nav';
+import NavigationMenuDemo from './Components/NavBar/navbar';
 
 function App() {
   return (
