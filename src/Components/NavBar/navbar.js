@@ -1,11 +1,10 @@
 import React from "react";
 import { styled, keyframes } from "@stitches/react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import * as styles from './styles';
+import * as styles from "./styles";
 import { violet, mauve, blackA } from "@radix-ui/colors";
 import Wallet from "../../assets/icons/walletIcon.svg";
 import Axies from "../../assets/icons/axiesIcon.svg";
-
 
 export const ContentListItem = React.forwardRef(
   ({ children, title, ...props }, forwardedRef) => (
@@ -40,16 +39,14 @@ const NavigationMenuContent = styles.StyledContent;
 const NavigationMenuViewport = styles.StyledViewport;
 const NavigationMenuIndicator = styles.StyledIndicatorWithArrow;
 
-
 export const NavigationMenuDemo = () => {
   return (
     <NavigationMenuZero>
       <NavigationMenuList>
-
-      <NavigationMenuItem>
-      <styles.StyledImg src={Axies}/>
+        <NavigationMenuItem>
+          <styles.StyledImg src={Axies} />
         </NavigationMenuItem>
-        
+
         <NavigationMenuItem>
           <NavigationMenuLink href="/">Home</NavigationMenuLink>
         </NavigationMenuItem>
@@ -58,41 +55,23 @@ export const NavigationMenuDemo = () => {
           <NavigationMenuTrigger>Explore</NavigationMenuTrigger>
           <NavigationMenuContent>
             <styles.ContentList layout="two">
-              <ContentListItem
-                title="Introduction"
-                href="/docs/primitives/overview/introduction"
-              >
+              <ContentListItem title="Introduction" href="/">
                 Build high-quality, accessible design systems and web apps.
               </ContentListItem>
-              <ContentListItem
-                title="Getting started"
-                href="/docs/primitives/overview/getting-started"
-              >
+              <ContentListItem title="Getting started" href="/">
                 A quick tutorial to get you up and running with Radix
                 Primitives.
               </ContentListItem>
-              <ContentListItem
-                title="Styling"
-                href="/docs/primitives/overview/styling"
-              >
+              <ContentListItem title="Styling" href="/">
                 Unstyled and compatible with any styling solution.
               </ContentListItem>
-              <ContentListItem
-                title="Animation"
-                href="/docs/primitives/overview/animation"
-              >
+              <ContentListItem title="Animation" href="/">
                 Use CSS keyframes or any animation library of your choice.
               </ContentListItem>
-              <ContentListItem
-                title="Accessibility"
-                href="/docs/primitives/overview/accessibility"
-              >
+              <ContentListItem title="Accessibility" href="/">
                 Tested in a range of browsers and assistive technologies.
               </ContentListItem>
-              <ContentListItem
-                title="Releases"
-                href="/docs/primitives/overview/releases"
-              >
+              <ContentListItem title="Releases" href="/">
                 Radix Primitives releases and their changelogs.
               </ContentListItem>
             </styles.ContentList>
@@ -127,7 +106,6 @@ export const NavigationMenuDemo = () => {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-            
           <NavigationMenuTrigger>Community</NavigationMenuTrigger>
           <NavigationMenuContent>
             <styles.ContentList layout="two">
@@ -176,12 +154,11 @@ export const NavigationMenuDemo = () => {
           <NavigationMenuSearchTrigger />
         </NavigationMenuItem>
 
-
         <NavigationMenuItem>
-            <styles.StyledButtonTrigger>
-                Wallet Connect
-                <styles.StyledImg src={Wallet}/>
-            </styles.StyledButtonTrigger>
+          <styles.StyledButtonTrigger>
+          <styles.StyledImg src={Wallet} />
+            Wallet Connect
+          </styles.StyledButtonTrigger>
         </NavigationMenuItem>
 
         <NavigationMenuIndicator />

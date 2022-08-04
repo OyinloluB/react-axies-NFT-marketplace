@@ -53,7 +53,7 @@ export const enterFromRight = keyframes({
 export const StyledMenu = styled(NavigationMenu.Root, {
     position: "relative",
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
     width: '100%',
     height: 80,
     zIndex: 1,
@@ -77,6 +77,7 @@ export const StyledMenu = styled(NavigationMenu.Root, {
     fontWeight: 500,
     lineHeight: 1,
     borderRadius: 4,
+    margin: "0px 10px",
     fontSize: 15,
     color: 'white',
     "&:focus": { position: "relative", boxShadow: `0 0 0 2px ${violet.violet7}` },
@@ -117,7 +118,7 @@ export const StyledMenu = styled(NavigationMenu.Root, {
     position: "relative",
     display: "linline-block",
     padding: "0px 8px",
-    "[data-state=open] &": { transform: "rotate(-180deg)" },
+    "[data-state=open] &": { transform: "rotate(-45deg)" },
     "@media (prefers-reduced-motion: no-preference)": {
       transition: "transform 250ms ease",
     }
@@ -129,10 +130,12 @@ export const StyledMenu = styled(NavigationMenu.Root, {
     display: "flex",
     borderRadius: 24,
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
     gap: 1,
-    "&:focus": { position: "relative", boxShadow: `0 0 0 2px ${violet.violet7}` },
-    "&:hover": { backgroundColor: violet.violet3 },
+    boxShadow: `0 0 0 2px ${violet.violet7}`,
+    margin: "0px 10px 0px 10px",
+    "&:focus": { position: "relative" },
+    "&:hover": { borderShadow: `0 0 0 2px ${violet.violet2}` },
   });
   
   export const StyledButton = styled(
@@ -142,11 +145,12 @@ export const StyledMenu = styled(NavigationMenu.Root, {
         ...itemStyles,
       backgroundColor: "transparent",
 
-    "&:focus": { position: "relative", boxShadow: `0 0 0 2px ${violet.violet7}` },
+    "&:focus": { position: "relative"},
     "&:hover": { backgroundColor: violet.violet3 },
         border: "none",
         padding: "8px 12px",
         borderRadius: 12,
+
       },
     );
   
